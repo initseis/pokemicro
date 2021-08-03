@@ -7,10 +7,35 @@
     <title>Document</title>
   </head>
   <body class="d-flex flex-column h-100">
-    <header></header>
-    <main>
-      <h1 class="">Hello World!</h1>
-      <button class="btn btn-primary">Clic</button>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><i class="fab fa-product-hunt d-inline-block"> </i> Pokescripts</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Types</a>
+              <a class="nav-link" href="#">Species</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <section class="row mt-3" id="pokemon-container"></section>
     </main>
     <footer class="footer mt-auto py-3 bg-warning">
       <div class="container-fluid ps-5">
