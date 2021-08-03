@@ -1,4 +1,5 @@
 import { getPokemonComments, setPokemonComment } from "./API.js";
+import { blankInputs } from "./strings.js";
 
 const form = document.querySelector("#add-comment");
 
@@ -7,17 +8,21 @@ const displayComments = async (id) => {
   response.then((comments) => {
     const commentsDiv = document.querySelector("#comments");
     commentsDiv.innerHTML = "";
-    const commentsQuantity = document.createElement("h4");
-    commentsQuantity.className = "text-sm-center";
+    const commentsQuantity = document.createElement("h5");
+    commentsQuantity.className = "text-sm-center mt-2";
     comments.length === undefined
       ? (commentsQuantity.innerHTML = "Comments (0)")
       : (commentsQuantity.innerHTML = `Comments (${comments.length})`);
     commentsDiv.appendChild(commentsQuantity);
+    const divWrapComments = document.createElement("div");
+    divWrapComments.className = "d-flex flex-column align-items-sm-start ps-4";
+    commentsDiv.appendChild(divWrapComments);
     if (comments.length !== undefined) {
       comments.forEach((element) => {
         const paragraph = document.createElement("p");
+        paragraph.className = "m-0";
         paragraph.innerHTML = `${element.creation_date} ${element.username}: ${element.comment}`;
-        commentsDiv.appendChild(paragraph);
+        divWrapComments.appendChild(paragraph);
       });
     }
   });
@@ -30,19 +35,9 @@ const addComment = async (event) => {
     form[0].value,
     form[1].value
   );
-  // const response = await fetch(`${involvementUrl}/comments/`, {
-  //   method: "POST",
-  //   body: JSON.stringify({
-  //     item_id: form[2].value,
-  //     username: form[0].value,
-  //     comment: form[1].value,
-  //   }),
-  //   headers: {
-  //     "Content-type": "application/json; charset=UTF-8",
-  //   },
-  // })
   response.then(() => {
     displayComments(form[2].value);
+    blankInputs();
   });
 };
 

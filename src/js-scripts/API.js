@@ -3,6 +3,7 @@ const involvementUrl =
   "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Vlgir6luyMApwO9KpUDb";
 
 const getPokemon = async (id) => {
+  console.log(id);
   const response = await fetch(`${pokeUrl}/${id}`, {
     headers: {
       "Content-type": "application/json; charset=UTF-8",

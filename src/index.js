@@ -1,13 +1,9 @@
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import "./css/style.css";
-import displayModal from "./js-scripts/modal.js";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./css/style.css";
+import initializeHome from "./home/home";
 import { addComment } from "./js-scripts/comments.js";
 
-const btnModal = document.querySelectorAll("button");
+initializeHome();
+
 const form = document.querySelector("#add-comment");
-
-btnModal.forEach((btn) => {
-  btn.addEventListener("click", displayModal);
-});
-
 form.addEventListener("submit", addComment);

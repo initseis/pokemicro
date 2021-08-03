@@ -1,4 +1,4 @@
-import capitalize from "./capitalize.js";
+import { capitalize, blankInputs } from "./strings.js";
 import { displayComments } from "./comments.js";
 import { getPokemon } from "./API.js";
 
@@ -40,8 +40,9 @@ const displayModal = async (event) => {
       : (document.querySelector(
           "#pokemon-weight"
         ).innerHTML = `Weight: ${Number(pokemon.weight / 10)} kg`);
-    displayComments(event.target.id);
-    form[2].value = event.target.id;
+    displayComments(pokemon.id);
+    blankInputs();
+    form[2].value = pokemon.id;
   });
 };
 
