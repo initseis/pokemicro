@@ -25,8 +25,6 @@ module.exports = {
   },
   output: {
     filename: "[name].bundle.js",
-    celan: true,
     path: path.resolve(__dirname, "dist"),
-    publicPath: "auto",
   },
 };
