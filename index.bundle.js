@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*****************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n___CSS_LOADER_EXPORT___.push([module.id, \"@import url(https://pro.fontawesome.com/releases/v5.10.0/css/all.css);\"]);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"\\r\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://javascript-capstone/./src/css/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n___CSS_LOADER_EXPORT___.push([module.id, \"@import url(https://pro.fontawesome.com/releases/v5.10.0/css/all.css);\"]);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \".img-pokemon {\\r\\n  max-height: 7rem;\\r\\n}\\r\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://javascript-capstone/./src/css/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -130,13 +130,53 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, style) {\
 
 /***/ }),
 
+/***/ "./src/home/api.js":
+/*!*************************!*\
+  !*** ./src/home/api.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst pokeURL = 'https://pokeapi.co/api/v2/pokemon?limit=15&offset=0';\r\n\r\nconst getPokemons = async () => {\r\n  const result = fetch(pokeURL);\r\n  return result;\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getPokemons);\r\n\n\n//# sourceURL=webpack://javascript-capstone/./src/home/api.js?");
+
+/***/ }),
+
+/***/ "./src/home/components/pokemonCard.js":
+/*!********************************************!*\
+  !*** ./src/home/components/pokemonCard.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst pokemonCard = (pokemon) => {\r\n  const card = ''\r\n    + '<div class=\"col-xl-3 col-md-4 col-xs-12 p-2\">'\r\n    + '          <div class=\"card\">'\r\n    + '            <img'\r\n    + `              src=\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg\"`\r\n    + '              alt=\"pokemon\"'\r\n    + '              class=\"card-img-top img-pokemon\"'\r\n    + '            />'\r\n    + '            <div class=\"card-body\">'\r\n    + '              <div class=\"row\">'\r\n    + '                <div class=\"col-6\">'\r\n    + `                  <h5 class=\"card-title\">${pokemon.name}</h5>`\r\n    + '                </div>'\r\n    + '                <div class=\"col-6 d-flex justify-content-center\">'\r\n    + '                  <i class=\"fas fa-heart\"></i>'\r\n    + '                  <p class=\"ms-2\">5 Likes</p>'\r\n    + '                </div>'\r\n    + '              </div>'\r\n    + '              <div class=\"row\">'\r\n    + '                <div class=\"col-12\">'\r\n    + `                  <button class=\"btn btn-primary w-100\" id=\"${pokemon.name}\">Comments</button>`\r\n    + '                </div>'\r\n    + '              </div>'\r\n    + '            </div>'\r\n    + '          </div>'\r\n    + '        </div>'\r\n    + '';\r\n\r\n  return card;\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (pokemonCard);\r\n\n\n//# sourceURL=webpack://javascript-capstone/./src/home/components/pokemonCard.js?");
+
+/***/ }),
+
+/***/ "./src/home/home.js":
+/*!**************************!*\
+  !*** ./src/home/home.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api */ \"./src/home/api.js\");\n/* harmony import */ var _components_pokemonCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/pokemonCard */ \"./src/home/components/pokemonCard.js\");\n\r\n\r\n\r\nconst initializeHome = () => {\r\n  const pokemonContainer = document.getElementById('pokemon-container');\r\n  const result = (0,_api__WEBPACK_IMPORTED_MODULE_0__.default)();\r\n  result\r\n    .then((response) => response.json())\r\n    .then(({ results }) => {\r\n      results.forEach((pokemon, index) => {\r\n        pokemon.id = index + 1;\r\n        pokemonContainer.insertAdjacentHTML('beforeend', (0,_components_pokemonCard__WEBPACK_IMPORTED_MODULE_1__.default)(pokemon));\r\n      });\r\n    });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initializeHome);\r\n\n\n//# sourceURL=webpack://javascript-capstone/./src/home/home.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/style.css */ \"./src/css/style.css\");\n\r\n\r\n\n\n//# sourceURL=webpack://javascript-capstone/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/style.css */ \"./src/css/style.css\");\n/* harmony import */ var _home_home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home/home */ \"./src/home/home.js\");\n/* harmony import */ var _js_scripts_modal_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js-scripts/modal.js */ \"./src/js-scripts/modal.js\");\n\r\n\r\n\r\n\r\n\r\n(0,_home_home__WEBPACK_IMPORTED_MODULE_2__.default)();\r\nconst btnModal = document.querySelectorAll('button');\r\nbtnModal.forEach((btn) => {\r\n  btn.addEventListener('click', _js_scripts_modal_js__WEBPACK_IMPORTED_MODULE_3__.default);\r\n});\r\n\n\n//# sourceURL=webpack://javascript-capstone/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/js-scripts/modal.js":
+/*!*********************************!*\
+  !*** ./src/js-scripts/modal.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst capitalize = (text) => {\r\n  const lowercase = text.toLowerCase();\r\n  return text.charAt(0).toUpperCase() + lowercase.slice(1);\r\n};\r\n\r\nconst displayModal = async (event) => {\r\n  const response = await fetch(\r\n    `https://pokeapi.co/api/v2/pokemon/${event.target.id}`,\r\n    {\r\n      headers: {\r\n        'Content-type': 'application/json; charset=UTF-8',\r\n      },\r\n    },\r\n  )\r\n    .then((response) => response.json())\r\n    .then((pokemon) => {\r\n      document.querySelector('#pokemon-name').innerHTML = pokemon.forms[0].name;\r\n      document.querySelector('#pokemon-img').src = pokemon.sprites.other.dream_world.front_default;\r\n      let types = 'Type:';\r\n      pokemon.types.map((element) => {\r\n        types += `<span class=\"ms-1 badge bg-secondary\">${element.type.name}</span>`;\r\n      });\r\n      document.querySelector('#pokemon-type').innerHTML = types;\r\n      let abilities = 'Abilities: ';\r\n      pokemon.abilities.map((element, i) => {\r\n        pokemon.abilities.length === i + 1\r\n          ? (abilities += capitalize(element.ability.name))\r\n          : (abilities = `${abilities + capitalize(element.ability.name)}, `);\r\n      });\r\n      document.querySelector('#pokemon-abilities').innerHTML = abilities;\r\n      String(pokemon.height).length === 1\r\n        ? (document.querySelector(\r\n          '#pokemon-height',\r\n        ).innerHTML = `Height: 0.${pokemon.height} mt`)\r\n        : (document.querySelector(\r\n          '#pokemon-height',\r\n        ).innerHTML = `Height: ${Number(pokemon.height / 10)} mt`);\r\n      String(pokemon.weight).length === 1\r\n        ? (document.querySelector(\r\n          '#pokemon-weight',\r\n        ).innerHTML = `Weight: 0.${pokemon.weight} kg`)\r\n        : (document.querySelector(\r\n          '#pokemon-weight',\r\n        ).innerHTML = `Weight: ${Number(pokemon.weight / 10)} kg`);\r\n    });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayModal);\r\n\n\n//# sourceURL=webpack://javascript-capstone/./src/js-scripts/modal.js?");
 
 /***/ }),
 
