@@ -3,6 +3,32 @@ const capitalize = (text) => {
   return text.charAt(0).toUpperCase() + lowercase.slice(1);
 };
 
+const displayComments = async (id) => {
+  const response = await fetch(
+    `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Vlgir6luyMApwO9KpUDb/comments?item_id=${id}`,
+    {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    },
+  )
+    .then((response) => response.json())
+    .then((comments) => {
+      const commentsDiv = document.querySelector('#comments');
+      commentsDiv.innerHTML = '';
+      const commentsQuantity = document.createElement('h4');
+      comments.length === undefined
+        ? (commentsQuantity.innerHTML = 'Comments (0)')
+        : (commentsQuantity.innerHTML = `Comments (${comments.length})`);
+      commentsDiv.appendChild(commentsQuantity);
+      comments.forEach((element) => {
+        const paragraph = document.createElement('p');
+        paragraph.innerHTML = `${element.creation_date} ${element.username}: ${element.comment}`;
+        commentsDiv.appendChild(paragraph);
+      });
+    });
+};
+
 const displayModal = async (event) => {
   const response = await fetch(
     `https://pokeapi.co/api/v2/pokemon/${event.target.id}`,
@@ -42,6 +68,7 @@ const displayModal = async (event) => {
         : (document.querySelector(
           '#pokemon-weight',
         ).innerHTML = `Weight: ${Number(pokemon.weight / 10)} kg`);
+      displayComments(event.target.id);
     });
 };
 
