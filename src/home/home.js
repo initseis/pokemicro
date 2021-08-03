@@ -1,5 +1,5 @@
-import { getPokemons } from './api';
-import { pokemonCard } from './components/pokemonCard';
+import getPokemons from './api';
+import pokemonCard from './components/pokemonCard';
 
 const initializeHome = () => {
   const pokemonContainer = document.getElementById('pokemon-container');
@@ -10,9 +10,8 @@ const initializeHome = () => {
       results.forEach((pokemon, index) => {
         pokemon.id = index + 1;
         pokemonContainer.insertAdjacentHTML('beforeend', pokemonCard(pokemon));
-        //console.log(pokemon);
       });
     });
 };
 
-export { initializeHome };
+export default initializeHome;

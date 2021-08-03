@@ -5,4 +5,4 @@ const getPokemons = async () => {
   return result;
 };
 
-export { getPokemons };
+export default getPokemons;
