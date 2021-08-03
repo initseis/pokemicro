@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1628031335699" clover="3.2.0">
+  <project timestamp="1628031335699" name="All files">
+    <metrics statements="45" coveredstatements="12" conditionals="3" coveredconditionals="0" methods="11" coveredmethods="1" elements="59" coveredelements="13" complexity="0" loc="45" ncloc="45" packages="1" files="3" classes="3"/>
+    <file name="API.js" path="/Users/sevinchek/Dev/javascript-capstone/src/js-scripts/API.js">
+      <metrics statements="12" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="0" type="stmt"/>
+      <line num="6" count="0" type="stmt"/>
+      <line num="11" count="0" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="20" count="0" type="stmt"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="24" count="0" type="stmt"/>
+      <line num="35" count="0" type="stmt"/>
+    </file>
+    <file name="comments.js" path="/Users/sevinchek/Dev/javascript-capstone/src/js-scripts/comments.js">
+      <metrics statements="26" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="1"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="7" count="0" type="stmt"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="9" count="0" type="stmt"/>
+      <line num="10" count="0" type="stmt"/>
+      <line num="11" count="0" type="stmt"/>
+      <line num="12" count="0" type="stmt"/>
+      <line num="13" count="0" type="stmt"/>
+      <line num="14" count="0" type="stmt"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="16" count="0" type="stmt"/>
+      <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="18" count="0" type="stmt"/>
+      <line num="19" count="0" type="stmt"/>
+      <line num="20" count="0" type="stmt"/>
+      <line num="21" count="0" type="stmt"/>
+      <line num="22" count="0" type="stmt"/>
+      <line num="25" count="0" type="stmt"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="32" count="0" type="stmt"/>
+      <line num="33" count="0" type="stmt"/>
+      <line num="38" count="0" type="stmt"/>
+      <line num="39" count="0" type="stmt"/>
+      <line num="40" count="0" type="stmt"/>
+      <line num="44" count="1" type="stmt"/>
+    </file>
+    <file name="strings.js" path="/Users/sevinchek/Dev/javascript-capstone/src/js-scripts/strings.js">
+      <metrics statements="7" coveredstatements="3" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="3" count="1" type="cond" truecount="0" falsecount="1"/>
+      <line num="4" count="0" type="stmt"/>
+      <line num="5" count="0" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="9" count="0" type="stmt"/>
+      <line num="10" count="0" type="stmt"/>
+    </file>
+  </project>
+</coverage>
