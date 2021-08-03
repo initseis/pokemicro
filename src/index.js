@@ -1,9 +1,9 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./css/style.css";
-import displayModal from "./js-scripts/modal.js";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/style.css';
+import displayModal from './js-scripts/modal.js';
 
-const btnModal = document.querySelectorAll("button");
+const btnModal = document.querySelectorAll('button');
 
 btnModal.forEach((btn) => {
-  btn.addEventListener("click", displayModal);
+  btn.addEventListener('click', displayModal);
 });
