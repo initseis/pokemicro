@@ -2,15 +2,17 @@ import { getPokemons, getLikes } from './api';
 import pokemonCard from './components/pokemonCard';
 import displayModal from '../js-scripts/modal.js';
 
+const countElements = () => {
+  const total = document.getElementById('pokemon-container').childElementCount;
+  return total;
+};
+
 const initializeHome = () => {
   const pokemonContainer = document.getElementById('pokemon-container');
   const likes = getLikes();
-
   likes
     .then((response) => response.json())
     .then((likes) => {
-      // console.log(likes);
-
       const result = getPokemons();
       result
         .then((response) => response.json())
@@ -21,12 +23,12 @@ const initializeHome = () => {
             );
             pokemon.id = index + 1;
             pokemon.likes = pokemonLike ? pokemonLike.likes : '';
-            console.log(pokemon);
             pokemonContainer.insertAdjacentHTML(
               'beforeend',
               pokemonCard(pokemon)
             );
           });
+          document.getElementById('totalCount').innerHTML = countElements();
           const btnModal = document.querySelectorAll('button');
           btnModal.forEach((btn) => {
             btn.addEventListener('click', displayModal);
