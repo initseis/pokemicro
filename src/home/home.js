@@ -8,7 +8,7 @@ const initializeHome = () => {
   likes
     .then((response) => response.json())
     .then((likes) => {
-      //console.log(likes);
+      // console.log(likes);
 
       const result = getPokemons();
       result
@@ -16,14 +16,14 @@ const initializeHome = () => {
         .then(({ results }) => {
           results.forEach((pokemon, index) => {
             const pokemonLike = likes.find(
-              (element) => element.item_id === pokemon.name
+              (element) => element.item_id === pokemon.name,
             );
             pokemon.id = index + 1;
             pokemon.likes = pokemonLike ? pokemonLike.likes : '';
             console.log(pokemon);
             pokemonContainer.insertAdjacentHTML(
               'beforeend',
-              pokemonCard(pokemon)
+              pokemonCard(pokemon),
             );
           });
         });
