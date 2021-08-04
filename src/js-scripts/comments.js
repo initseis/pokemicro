@@ -3,6 +3,8 @@ import { blankInputs } from './strings.js';
 
 const form = document.querySelector('#add-comment');
 
+const commentsCounter = (div) => div.childElementCount;
+
 const displayComments = async (id) => {
   const response = getPokemonComments(id);
   response.then((comments) => {
@@ -10,9 +12,6 @@ const displayComments = async (id) => {
     commentsDiv.innerHTML = '';
     const commentsQuantity = document.createElement('h5');
     commentsQuantity.className = 'text-sm-center mt-2';
-    comments.length === undefined
-      ? (commentsQuantity.innerHTML = 'Comments (0)')
-      : (commentsQuantity.innerHTML = `Comments (${comments.length})`);
     commentsDiv.appendChild(commentsQuantity);
     const divWrapComments = document.createElement('div');
     divWrapComments.className = 'd-flex flex-column align-items-sm-start ps-4';
@@ -25,6 +24,9 @@ const displayComments = async (id) => {
         divWrapComments.appendChild(paragraph);
       });
     }
+    commentsQuantity.innerHTML = `Comments (${commentsCounter(
+      divWrapComments,
+    )})`;
   });
 };
 
@@ -41,4 +43,4 @@ const addComment = async (event) => {
   });
 };
 
-export { displayComments, addComment };
+export { displayComments, addComment, commentsCounter };
