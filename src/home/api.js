@@ -1,4 +1,4 @@
-const pokeURL = 'https://pokeapi.co/api/v2/pokemon?limit=15&offset=0';
+const pokeURL = 'https://pokeapi.co/api/v2/pokemon?limit=15&offset=100';
 const pokeLikeURL =
   'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Hh95XrOFts64CIu0nZBU/likes';
 
@@ -36,7 +36,17 @@ const setDataLikes = (likes) => {
 
 const updatePokemonLike = (pokemon) => {
   const findObj = dataLikes.find((obj) => obj.item_id === pokemon);
-  findObj.likes = findObj.likes + 1;
+  //console.log('find', findObj);
+  if (typeof findObj === 'undefined') {
+    console.log('push', dataLikes);
+    dataLikes.push({
+      likes: 1,
+      item_id: pokemon,
+    });
+  } else {
+    findObj.likes = findObj.likes + 1;
+  }
+  console.log('update', dataLikes);
 };
 
 export {
