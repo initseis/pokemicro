@@ -13,7 +13,6 @@ const initializeHome = () => {
         pokemonContainer.insertAdjacentHTML('beforeend', pokemonCard(pokemon));
       });
       const btnModal = document.querySelectorAll('button');
-      console.log(btnModal);
       btnModal.forEach((btn) => {
         btn.addEventListener('click', displayModal);
       });
