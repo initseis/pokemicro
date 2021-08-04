@@ -3,6 +3,8 @@ import { blankInputs } from './strings.js';
 
 const form = document.querySelector('#add-comment');
 
+const commentsCounter = (div) => div.childElementCount;
+
 const displayComments = async (id) => {
   const response = getPokemonComments(id);
   response.then((comments) => {
@@ -40,7 +42,5 @@ const addComment = async (event) => {
     blankInputs();
   });
 };
-
-const commentsCounter = (div) => div.childElementCount;
 
 export { displayComments, addComment, commentsCounter };
