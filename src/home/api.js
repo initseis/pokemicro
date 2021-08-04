@@ -1,6 +1,5 @@
-const pokeURL = 'https://pokeapi.co/api/v2/pokemon?limit=15&offset=100';
-const pokeLikeURL =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Hh95XrOFts64CIu0nZBU/likes';
+const pokeURL = 'https://pokeapi.co/api/v2/pokemon?limit=15&offset=0';
+const pokeLikeURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Hh95XrOFts64CIu0nZBU/likes';
 
 let dataLikes = [];
 
@@ -26,9 +25,7 @@ const saveLike = async (pokemon) => {
   return response;
 };
 
-const getDataLikes = () => {
-  return dataLikes;
-};
+const getDataLikes = () => dataLikes;
 
 const setDataLikes = (likes) => {
   dataLikes = [...likes];
@@ -36,7 +33,6 @@ const setDataLikes = (likes) => {
 
 const updatePokemonLike = (pokemon) => {
   const findObj = dataLikes.find((obj) => obj.item_id === pokemon);
-  //console.log('find', findObj);
   if (typeof findObj === 'undefined') {
     console.log('push', dataLikes);
     dataLikes.push({
@@ -44,9 +40,8 @@ const updatePokemonLike = (pokemon) => {
       item_id: pokemon,
     });
   } else {
-    findObj.likes = findObj.likes + 1;
+    findObj.likes += 1;
   }
-  console.log('update', dataLikes);
 };
 
 export {
