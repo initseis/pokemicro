@@ -15,7 +15,7 @@ const pokemonCard = (pokemon) => {
     '                </div>' +
     '                <div class="col-4 d-flex justify-content-center">' +
     `                  <a href="#" ><i id="btnLike" data-pokemon="${pokemon.name}" class="fas fa-heart"></i></a>` +
-    `                  <p class="ms-2">${pokemon.likes}</p>` +
+    `                  <p class="ms-2" id="like-${pokemon.name}">${pokemon.likes}</p>` +
     '                </div>' +
     '              </div>' +
     '              <div class="row">' +

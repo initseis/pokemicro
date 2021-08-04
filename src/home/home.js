@@ -3,16 +3,23 @@ import {
   getLikes,
   getDataLikes,
   setDataLikes,
+  updatePokemonLike,
   saveLike,
 } from './api';
 import pokemonCard from './components/pokemonCard';
 
+const updateDomLike = (pokemon) => {
+  updatePokemonLike(pokemon);
+  const pokemonLocalLikes = getDataLikes();
+  const domLike = document.getElementById(`like-${pokemon}`);
+  const findPokemon = pokemonLocalLikes.find((obj) => obj.item_id === pokemon);
+  domLike.innerHTML = findPokemon.likes;
+};
+
 const addLike = (e) => {
-  console.log('data likes', getDataLikes());
-  console.log(e.target.getAttribute('data-pokemon'));
   const pokemonLike = e.target.getAttribute('data-pokemon');
   const result = saveLike(pokemonLike);
-  result.then((response) => console.log('saved like'));
+  result.then(() => updateDomLike(pokemonLike));
 };
 
 const initializeHome = () => {
