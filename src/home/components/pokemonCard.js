@@ -1,7 +1,7 @@
 const pokemonCard = (pokemon) => {
   const card = ''
     + '<div class="col-xl-3 col-md-4 col-xs-12 p-2">'
-    + '          <div class="card">'
+    + '          <div class="card pt-3">'
     + '            <img'
     + `              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg"`
     + '              alt="pokemon"'
@@ -9,12 +9,12 @@ const pokemonCard = (pokemon) => {
     + '            />'
     + '            <div class="card-body">'
     + '              <div class="row">'
-    + '                <div class="col-6">'
+    + '                <div class="col-8">'
     + `                  <h5 class="card-title">${pokemon.name}</h5>`
     + '                </div>'
-    + '                <div class="col-6 d-flex justify-content-center">'
+    + '                <div class="col-4 d-flex justify-content-center">'
     + '                  <i class="fas fa-heart"></i>'
-    + '                  <p class="ms-2">5 Likes</p>'
+    + `                  <p class="ms-2">${pokemon.likes}</p>`
     + '                </div>'
     + '              </div>'
     + '              <div class="row">'
