@@ -13,8 +13,8 @@ const pokemonCard = (pokemon) => {
     + `                  <h5 class="card-title">${pokemon.name}</h5>`
     + '                </div>'
     + '                <div class="col-4 d-flex justify-content-center">'
-    + '                  <i class="fas fa-heart"></i>'
-    + `                  <p class="ms-2">${pokemon.likes}</p>`
+    + `                  <a href="#" ><i id="btnLike" data-pokemon="${pokemon.name}" class="fas fa-heart"></i></a>`
+    + `                  <p class="ms-2" id="like-${pokemon.name}">${pokemon.likes}</p>`
     + '                </div>'
     + '              </div>'
     + '              <div class="row">'

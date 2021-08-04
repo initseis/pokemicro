@@ -1,6 +1,27 @@
-import { getPokemons, getLikes } from './api';
+import {
+  getPokemons,
+  getLikes,
+  getDataLikes,
+  setDataLikes,
+  updatePokemonLike,
+  saveLike,
+} from './api';
 import pokemonCard from './components/pokemonCard';
 import displayModal from '../js-scripts/modal.js';
+
+const updateDomLike = (pokemon) => {
+  updatePokemonLike(pokemon);
+  const pokemonLocalLikes = getDataLikes();
+  const domLike = document.getElementById(`like-${pokemon}`);
+  const findPokemon = pokemonLocalLikes.find((obj) => obj.item_id === pokemon);
+  domLike.innerHTML = findPokemon.likes;
+};
+
+const addLike = (e) => {
+  const pokemonLike = e.target.getAttribute('data-pokemon');
+  const result = saveLike(pokemonLike);
+  result.then(() => updateDomLike(pokemonLike));
+};
 
 const initializeHome = () => {
   const pokemonContainer = document.getElementById('pokemon-container');
@@ -9,23 +30,25 @@ const initializeHome = () => {
   likes
     .then((response) => response.json())
     .then((likes) => {
-      // console.log(likes);
-
       const result = getPokemons();
       result
         .then((response) => response.json())
         .then(({ results }) => {
+          setDataLikes(likes);
           results.forEach((pokemon, index) => {
             const pokemonLike = likes.find(
               (element) => element.item_id === pokemon.name
             );
             pokemon.id = index + 1;
             pokemon.likes = pokemonLike ? pokemonLike.likes : '';
-            console.log(pokemon);
             pokemonContainer.insertAdjacentHTML(
               'beforeend',
               pokemonCard(pokemon)
             );
+            const likeBtn = document.querySelectorAll('#btnLike');
+            likeBtn.forEach((btn) => {
+              btn.addEventListener('click', addLike);
+            });
           });
           const btnModal = document.querySelectorAll('button');
           btnModal.forEach((btn) => {
