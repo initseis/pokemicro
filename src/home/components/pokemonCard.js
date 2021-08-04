@@ -19,7 +19,7 @@ const pokemonCard = (pokemon) => {
     + '              </div>'
     + '              <div class="row">'
     + '                <div class="col-12">'
-    + `                  <button class="btn btn-primary w-100" id="${pokemon.name}">Comments</button>`
+    + `                  <button class="btn btn-primary w-100" id="${pokemon.name}" data-bs-toggle="modal" data-bs-target="#pokemonModal">Comments</button>`
     + '                </div>'
     + '              </div>'
     + '            </div>'

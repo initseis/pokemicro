@@ -43,50 +43,11 @@
 
     <main class="container">
       <section class="row mt-3" id="pokemon-container"></section>
-      <!-- Buttons trigger modal -->
-      <div class="container p-5 d-flex justify-content-between">
-        <button
-          id="1"
-          type="button"
-          class="btn btn-primary w-25"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
-        >
-          Pokemon 1
-        </button>
-        <button
-          id="2"
-          type="button"
-          class="btn btn-primary w-25"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
-        >
-          Pokemon 2
-        </button>
-        <button
-          id="3"
-          type="button"
-          class="btn btn-primary w-25"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
-        >
-          Pokemon 3
-        </button>
-        <button
-          id="4"
-          type="button"
-          class="btn btn-primary w-25"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
-        >
-          Pokemon 4
-        </button>
-      </div>
 
       <!-- Modal -->
       <div
         class="modal fade"
-        id="exampleModal"
+        id="pokemonModal"
         tabindex="-1"
         aria-labelledby="pokemon-name"
         aria-hidden="true"
@@ -101,29 +62,55 @@
                 data-bs-dismiss="modal"
               ></button>
             </div>
-            <div class="d-flex justify-content-center">
+            <div class="d-flex flex-column align-items-sm-center">
               <img id="pokemon-img" src="#" alt="" />
+              <h3 id="pokemon-name" class="modal-title">...</h3>
             </div>
             <div class="modal-body text-center">
-              <h4 id="pokemon-name" class="modal-title">...</h4>
               <div class="container row mt-3">
                 <div class="col-sm-6 d-flex justify-content-sm-start mb-2">
                   <h6 id="pokemon-type" class="text-sm-start">...</h6>
                 </div>
                 <div class="col-sm-6 d-flex justify-content-sm-start mb-2">
-                  <h6 id="pokemon-abilities" class="text-sm-start"></h6>
+                  <h6 id="pokemon-abilities" class="text-sm-start">...</h6>
                 </div>
                 <div class="col-sm-6 d-flex justify-content-sm-start mb-2">
-                  <h6 id="pokemon-height" class="text-sm-start"></h6>
+                  <h6 id="pokemon-height" class="text-sm-start">...</h6>
                 </div>
                 <div class="col-sm-6 d-flex justify-content-sm-start mb-2">
-                  <h6 id="pokemon-weight" class="text-sm-start"></h6>
+                  <h6 id="pokemon-weight" class="text-sm-start">...</h6>
                 </div>
               </div>
+
+              <div id="comments"></div>
+              <div>
+                <h5 id="pokemon-comments" class="text-sm-center mt-4 mb-3">
+                  Add a comment
+                </h5>
+                <form
+                  class="d-flex flex-column justify-content-sm-start px-4"
+                  id="add-comment"
+                >
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control w-50"
+                      placeholder="Your name"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <textarea
+                      class="form-control"
+                      placeholder="Your insights"
+                      required
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Comment</button>
+                </form>
+              </div>
             </div>
-            <div id="comments" class="modal-footer d-flex flex-column">
-              <h4 id="pokemon-comments">...</h4>
-            </div>
+            <!-- <div class="modal-footer d-flex flex-column"></div> -->
           </div>
         </div>
       </div>
