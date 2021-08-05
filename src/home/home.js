@@ -9,6 +9,11 @@ import {
 import pokemonCard from './components/pokemonCard';
 import displayModal from '../js-scripts/modal.js';
 
+const countElements = () => {
+  const total = document.getElementById('pokemon-container').childElementCount;
+  return total;
+};
+
 const updateDomLike = (pokemon) => {
   updatePokemonLike(pokemon);
   const pokemonLocalLikes = getDataLikes();
@@ -26,7 +31,6 @@ const addLike = (e) => {
 const initializeHome = () => {
   const pokemonContainer = document.getElementById('pokemon-container');
   const likes = getLikes();
-
   likes
     .then((response) => response.json())
     .then((likes) => {
@@ -50,6 +54,7 @@ const initializeHome = () => {
               btn.addEventListener('click', addLike);
             });
           });
+          document.getElementById('totalCount').innerHTML = countElements();
           const btnModal = document.querySelectorAll('button');
           btnModal.forEach((btn) => {
             btn.addEventListener('click', displayModal);
