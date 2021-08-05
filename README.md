@@ -35,8 +35,8 @@
 
 ## API Providers
 
-[PokeAPI](https://pokeapi.co/)
-[Microverse Involvement API](https://pokeapi.co/)
+- [PokeAPI](https://pokeapi.co/)
+- [Microverse Involvement API](https://pokeapi.co/)
 
 ## 🤝 Contributing
 
