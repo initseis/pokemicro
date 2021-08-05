@@ -27,7 +27,8 @@ i {
 }
 
 .navbar-light,
-.bg-light {
+.bg-light,
+footer {
   background-color: #ffe031 !important;
 }
 
