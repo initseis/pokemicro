@@ -10,7 +10,7 @@
 
 ## Demo
 
-- [Online](https://sevinchek.github.io/javascript-capstone/)
+- [Online Demo](https://sevinchek.github.io/javascript-capstone/)
 
 ## Project Setup
 
@@ -32,6 +32,11 @@
 - GitHub: [@EroAuditore](https://github.com/EroAuditore)
 - Twitter: [@EroAuditore](https://twitter.com/EroAuditore)
 - LinkedIn: [EroAuditore](https://www.linkedin.com/in/EroAuditore/)
+
+## API Providers
+
+[PokeAPI](https://pokeapi.co/)
+[Microverse Involvement API](https://pokeapi.co/)
 
 ## 🤝 Contributing
 
