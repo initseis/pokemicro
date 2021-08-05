@@ -41,13 +41,13 @@ const initializeHome = () => {
           setDataLikes(likes);
           results.forEach((pokemon, index) => {
             const pokemonLike = likes.find(
-              (element) => element.item_id === pokemon.name,
+              (element) => element.item_id === pokemon.name
             );
             pokemon.id = index + 1;
             pokemon.likes = pokemonLike ? pokemonLike.likes : '';
             pokemonContainer.insertAdjacentHTML(
               'beforeend',
-              pokemonCard(pokemon),
+              pokemonCard(pokemon)
             );
             const likeBtn = document.querySelectorAll('#btnLike');
             likeBtn.forEach((btn) => {
@@ -63,4 +63,4 @@ const initializeHome = () => {
     });
 };
 
-export { initializeHome, countElements };
+export default initializeHome;
