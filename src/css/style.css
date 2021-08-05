@@ -1,0 +1,106 @@
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+
+.img-pokemon {
+  max-height: 7rem;
+}
+
+textarea {
+  resize: none;
+  height: 5rem;
+}
+
+body {
+  background-image: url("../img/poke-pattern.jpg");
+}
+
+.btn {
+  background-color: #ff0707;
+  color: #fff;
+}
+
+i {
+  color: #ff0707;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.navbar-light,
+.bg-light,
+footer {
+  background-color: #ffe031 !important;
+}
+
+.card,
+#counter {
+  background-color: #6ea4bb;
+}
+
+.card-title {
+  color: #fff;
+}
+
+.hearts {
+  color: #fff;
+}
+
+.grass {
+  background-color: #78c850;
+}
+
+.fire {
+  background-color: #f08030;
+}
+
+.water {
+  background-color: #6890f0;
+}
+
+.bug {
+  background-color: #a8b820;
+}
+
+.normal {
+  background-color: #a8a878;
+}
+
+.poison {
+  background-color: #a040a0;
+}
+
+.electric {
+  background-color: #f8d030;
+}
+
+.ground {
+  background-color: #e0c068;
+}
+
+.fairy {
+  background-color: #ee99ac;
+}
+
+.fighting {
+  background-color: #c03028;
+}
+
+.psychic {
+  background-color: #f85888;
+}
+
+.rock {
+  background-color: #b8a038;
+}
+
+.ghost {
+  background-color: #705898;
+}
+
+.ice {
+  background-color: #98d8d8;
+}
+
+.dragon {
+  background-color: #7038f8;
+}
