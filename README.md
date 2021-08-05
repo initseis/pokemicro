@@ -1,4 +1,4 @@
-# javascript-capstone
+# PokeMicro (JavaScript Capstone)
 
 > This capstone project is about consuming an API, in this case we used the PokeAPI. We hope you enjoy it!
 
