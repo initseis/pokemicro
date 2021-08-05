@@ -15,7 +15,7 @@ const displayModal = async (event) => {
     document.querySelector('#pokemon-img').height = '218';
     let types = 'Type:';
     pokemon.types.map((element) => {
-      types += `<span class="ms-1 badge bg-secondary">${element.type.name}</span>`;
+      types += `<span class="ms-1 badge ${element.type.name}">${element.type.name}</span>`;
     });
     document.querySelector('#pokemon-type').innerHTML = types;
     let abilities = 'Abilities: ';
