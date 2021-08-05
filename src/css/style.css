@@ -26,9 +26,9 @@ i {
   color: #fff;
 }
 
-header,
-footer {
-  background-color: #ffe031;
+.navbar-light,
+.bg-light {
+  background-color: #ffe031 !important;
 }
 
 .card,
