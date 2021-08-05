@@ -63,4 +63,4 @@ const initializeHome = () => {
     });
 };
 
-export default initializeHome;
+export { initializeHome, countElements };
